@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/crisrauber/architeture-with-ts/issues"
   },
-  "homepage": "https://github.com/crisrauber/architeture-with-ts#readme"
+  "homepage": "https://github.com/crisrauber/architeture-with-ts#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.0"
+  }
 }
