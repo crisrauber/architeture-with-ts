@@ -1,0 +1,19 @@
+{
+  "name": "architeture-with-ts",
+  "version": "1.0.0",
+  "description": "Clean architeture with typescrypt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisrauber/architeture-with-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crisrauber/architeture-with-ts/issues"
+  },
+  "homepage": "https://github.com/crisrauber/architeture-with-ts#readme"
+}
