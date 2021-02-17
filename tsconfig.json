@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
-        "outDir": "./dist",
-        "module": "commonjs",
-        "target": "ES2019",
-        "esModuleInterop": true,
-        "allowJs": true
+        "outDir": "./dist", // arquivo de output
+        "module": "commonjs",  // quando gerar o output, converter para commomjs
+        "target": "ES2019", // qual versão do ecma ira ser gerada
+        "esModuleInterop": true, //converte modules para commomjs
+        "allowJs": true // permite arquivos de js
     },
     "exclude": [
         "node_modules"
