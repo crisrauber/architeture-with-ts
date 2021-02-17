@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/crisrauber/architeture-with-ts#readme",
   "devDependencies": {
-    "git-commit-msg-linter": "^3.0.0"
+    "@types/node": "^14.14.28",
+    "git-commit-msg-linter": "^3.0.0",
+    "typescript": "^4.1.5"
   }
 }
