@@ -1,5 +1,5 @@
-import { rejects } from 'assert'
-import { Encrypter } from '../../protocols/encrypter'
+
+import { Encrypter } from './/db-add-accout-protocols'
 import { DbAddAccount } from './db-add-account'
 
 interface SutTypes {
