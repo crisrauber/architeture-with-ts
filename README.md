@@ -1,2 +1,2 @@
 # architeture-with-ts
-Clean architeture with typescrypt
+Project to learn Clean architecture and improve my knowledge in TypeScript.
