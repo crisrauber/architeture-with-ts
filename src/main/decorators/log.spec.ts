@@ -91,7 +91,7 @@ describe('LogControllerDecorator', () => {
     expect(httpResponse).toEqual(ok(makeFakeAccount()))
   })
 
-  test('should call LogErrorRepository with correct error if controller returns a server error',async () => {
+  test('should call LogErrorRepository with correct error if controller returns a server errors',async () => {
     const { sut, controllerStub, logErrorRepositoryStub } = makeSut()
 
     const logSpy = jest.spyOn(logErrorRepositoryStub, 'log')
