@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { Encrypter } from '../../data/protocols/encrypter'
+import { Encrypter } from '../../data/protocols/cryptography/encrypter'
 import bcrypt from 'bcrypt'
 
 export class BcryptAdapter implements Encrypter {
