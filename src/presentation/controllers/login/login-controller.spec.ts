@@ -1,8 +1,8 @@
-import { LoginController } from './login'
+import { LoginController } from './login-controller'
 import { badRequest, ok, serverError, unauthorized } from '../../helpers/http/http-helper'
 import { MissingParamError } from '../../errors'
-import { httpRequest, Authentication } from './login-protocols'
-import { Validation } from '../signup/signup-protocols'
+import { httpRequest, Authentication } from './login-controller-protocols'
+import { Validation } from '../signup/signup-controller-protocols'
 import { AuthenticationModel } from '../../../domain/usecases/authentication'
 
 const makeValidation = (): Validation => {
