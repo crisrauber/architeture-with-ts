@@ -16,13 +16,14 @@ export class SignUpController implements Controller {
       if (error) {
         return badRequest(error)
       }
-
+     
       const account = await this.addAccount.add({
         name,
         email,
         password
       })
-
+      
+    
       return ok(account)
     } catch (error) {
       return serverError(error)

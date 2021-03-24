@@ -5,7 +5,8 @@
         "target": "ES2019", // qual versão do ecma ira ser gerada
         "esModuleInterop": true, //converte modules para commomjs
         "allowJs": true, // permite arquivos de js
-        "sourceMap": true
+        "sourceMap": true, //mapear arquivos para debugar
+        "rootDir": "src" // root para o ts
     },
     "include": [
         "src"
