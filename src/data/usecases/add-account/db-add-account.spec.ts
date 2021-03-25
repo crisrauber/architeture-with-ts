@@ -1,4 +1,5 @@
 
+import { resolve } from 'node:path'
 import { Hasher, AddAccountModel, AccountModel, AddAccountRepository, LoadAccountByEmailRepository } from './/db-add-accout-protocols'
 import { DbAddAccount } from './db-add-account'
 
@@ -25,7 +26,7 @@ const makeAddAccountRepository = (): AddAccountRepository => {
 const makeLoadAccountByEmailRepository = (): LoadAccountByEmailRepository => {
   class LoadAccountByEmailRepositoryStub implements LoadAccountByEmailRepository {
     async loadByEmail (email: string): Promise<AccountModel> {
-      return makeFakeAccount()
+      return null
     }
   }
 
@@ -128,5 +129,15 @@ describe('DbAddAccount Usecase', () => {
     await sut.add(makeFakeAccountData())
 
     expect(loadSpy).toHaveBeenCalledWith('valid_email@mail.com')
+  })
+
+  test('should return null if LoadAccountByEmailRepository finds any email', async () => {
+    const { sut, loadAccountByEmailRepositoryStub } = makeSut()
+
+    jest.spyOn(loadAccountByEmailRepositoryStub, 'loadByEmail').mockReturnValueOnce(new Promise(resolve => resolve(makeFakeAccount())))
+
+    const account = await sut.add(makeFakeAccountData())
+
+    expect(account).toBe(null)
   })
 })
