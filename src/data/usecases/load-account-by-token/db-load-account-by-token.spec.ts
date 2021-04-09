@@ -12,13 +12,26 @@ const makeDecrypterStub = (): Decrypter => {
   return new DecrypterStub()
 }
 
+interface SutTypes {
+  sut: DbLoadAccountByToken
+  decrypterStub: Decrypter
+}
+
+const makeSut = (): SutTypes => {
+  const decrypterStub = makeDecrypterStub()
+  const sut = new DbLoadAccountByToken(decrypterStub)
+
+  return {
+    sut,
+    decrypterStub
+  }
+}
+
 describe('DbLoadAccountByToken Usecase', () => {
   test('should call Decrypter with correct values', async () => {
-    const decrypterStub = makeDecrypterStub()
+    const { sut,decrypterStub } = makeSut()
 
     const decryptSpy = jest.spyOn(decrypterStub, 'decrypt')
-
-    const sut = new DbLoadAccountByToken(decrypterStub)
 
     await sut.load('any_token')
 
