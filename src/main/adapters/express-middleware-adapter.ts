@@ -11,7 +11,7 @@ export const adaptMiddleware = (middleware: Middlaware) => {
 
     if (httpResponse.statusCode === 200) {
       Object.assign(req, httpResponse.body)
-      next()
+      return next()
     }
 
     res.status(httpResponse.statusCode).json({
