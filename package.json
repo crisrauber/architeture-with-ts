@@ -1,6 +1,6 @@
 {
   "name": "architeture-with-ts",
-  "version": "v1.2.3",
+  "version": "v1.3.0",
   "description": "Clean architeture with typescrypt",
   "main": "index.js",
   "scripts": {
