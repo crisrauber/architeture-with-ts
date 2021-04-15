@@ -14,5 +14,4 @@ export const makeDbAuthentication = (): Authentication => {
   const jwtAdapter = new JwtAdapter(env.jwtSecret)
 
   return new DbAuthentication(accountMongoRepository,bcryptAdapter, jwtAdapter, accountMongoRepository)
-
 }
