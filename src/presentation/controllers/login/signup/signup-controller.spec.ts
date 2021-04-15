@@ -100,7 +100,6 @@ describe('Signup Controller', () => {
     expect(httpResponse).toEqual(serverError(new ServerError(null)))
   })
 
-  
   test('Should return 403 if addAccount returns null', async () => {
     const { sut, addAccountStub } = makeSut()
     jest.spyOn(addAccountStub, 'add').mockReturnValueOnce(null)
@@ -158,5 +157,4 @@ describe('Signup Controller', () => {
 
     expect(httpResponse).toEqual(serverError(new Error()))
   })
-
 })
